@@ -10,13 +10,11 @@ import org.primefaces.push.PushContextFactory;
  *
  * @author a.bailey
  */
-/*
 @Singleton
 @Startup
-*/
 public class AsynchDirectionChangeSimulator {
 
-    public final static String[] DIRS = {
+    final static String[] DIRS = {
         "North",
         "Northeast",
         "East",
@@ -28,7 +26,7 @@ public class AsynchDirectionChangeSimulator {
     };
     
     
-    @Schedule(minute = "*", second = "*/5", hour = "*")
+    @Schedule(minute = "*", second = "*/1", hour = "*")
     public void pushDirection() {
         String nextDirection = DIRS[(int)(Math.random()*DIRS.length)];
         PushContext ctx = PushContextFactory.getDefault().getPushContext();

@@ -13,22 +13,13 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet>
-        <servlet-name>SimulatorServlet</servlet-name>
-        <servlet-class>org.andy.pf.tfsim.simulator.SimulatorServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
     <servlet-mapping>
         <servlet-name>Push Servlet</servlet-name>
         <url-pattern>/primepush/*</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SimulatorServlet</servlet-name>
-        <url-pattern>/SimulatorServlet</url-pattern>
+        <url-pattern>/faces/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
